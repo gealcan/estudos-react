@@ -3,6 +3,11 @@
   src: url('./fonts/RobotoMono-ThinItalic.ttf');
 }
 
+@font-face {
+  font-family: 'Girassol';
+  src: url('./fonts/Girassol-Regular.ttf');
+}
+
 
 * {
   font-family: 'RobotoMono', monospace;
@@ -20,9 +25,9 @@ body {
 }
 
 h1 {
+  font-family: 'Girassol';
+  color: rgba(71, 64, 64, 0.979);
   font-size: 35px;
-  border: solid 1px;
-  border-radius: 5px;
-  border: dotted;
+  text-decoration-line: underline;
 }
 

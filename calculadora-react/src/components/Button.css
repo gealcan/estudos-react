@@ -4,10 +4,33 @@
 }
 
 .button {
+    font-family: 'Girassol';
     font-size: 1.4em;
     background-color: var(--bg-button);
     border: none;
     border-right: var(--border-button);
     border-bottom: var(--border-button);
     outline: none;
+}
+
+.button:active {
+    background-color: rgb(155, 151, 151);
+}
+
+.button.double {
+    grid-column: span 2;
+}
+
+.button.triple {
+    grid-column: span 3;
+}
+
+.button.operation {
+    background-color: rgba(235, 89, 21, 0.979);
+    color: #FFF;
+    font-size: 1.6em;
+}
+
+.button.operation:active {
+    background-color: rgba(218, 72, 4, 0.979);
 }
