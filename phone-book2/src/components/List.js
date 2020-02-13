@@ -1,23 +1,23 @@
 import React from "react";
 
+const randomColor = () => {
+  let hexadecimais = "0123456789ABCDEF";
+  let cor = "#";
+
+  // Pega um número aleatório no array acima
+  for (let i = 0; i < 6; i++) {
+    //E concatena à variável cor
+    cor += hexadecimais[Math.floor(Math.random() * 16)];
+  }
+  return cor;
+};
+
 const ListContacts = ({ contatos }) => {
-  const randomColor = () => {
-    let hexadecimais = "0123456789ABCDEF";
-    let cor = "#";
-
-    // Pega um número aleatório no array acima
-    for (let i = 0; i < 6; i++) {
-      //E concatena à variável cor
-      cor += hexadecimais[Math.floor(Math.random() * 16)];
-    }
-    return cor;
-  };
-
   const orderContacts = contatos.sort((a, b) => a.name < b.name && -1);
   const letra = element => element.substr(0, 1);
 
-  const gerarItens = itens => {
-    return itens.map((item, index) => (
+  return <ul>
+    {orderContacts.map((item, index) => (
       <div
         style={{ display: "flex", flexDirection: "row" }}
         key={`item-${index}`} // nao entendi a sintaxe
@@ -64,9 +64,8 @@ const ListContacts = ({ contatos }) => {
           </span>
         </div>
       </div>
-    ));
-  };
-  return <ul>{gerarItens(orderContacts)}</ul>;
+    ))}
+  </ul>;
 };
 
 export default ListContacts;
